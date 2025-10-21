@@ -29,6 +29,7 @@ with open(f'{in_m}.ChaseData.txt', 'r') as file:
                 times_1[sym[0]] = False
             if mov["M"] == mov["C"]:
                 eveding = f"Mouse caught at: ({mov["M"][0]:>2},{mov["M"][1]:>2})"
+                break
         else:
             pred_an = f""
             if mov["D_M"] == 0:
