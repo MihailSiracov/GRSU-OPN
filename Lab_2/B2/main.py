@@ -10,6 +10,7 @@ with open(f'{in_m}.WCData.txt', 'r') as file:
         elif i == 1:
             ans.append(text[i])
         else:
+
             pred_ans = []
             pred_ans += text[i].split()
             TWS = round(35.74 + (0.6125 * float(pred_ans[1])) + ((0.4275 * float(pred_ans[1])) - 35.75) * float(pred_ans[2]) ** 0.16, 1)

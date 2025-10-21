@@ -1,8 +1,8 @@
 list_of_distanse = []
 in_m = input("Введите номер файла для открытия")
 with open(f'inmap{in_m}.dat', 'r') as file:
-    text = file.readlines(1)
-    col, map_range = text[0].split()
+    text = file.readline()
+    col, map_range = text.split()
     col = int(col)
     map_range = float(map_range)
     text = file.readlines()
