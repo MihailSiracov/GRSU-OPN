@@ -37,7 +37,6 @@ ans2_data = {}
 mimimum = 10000000000000000000000000000000000000000000000000
 maximum = 0
 averege = 0
-col_not_zero = 0
 
 # началo чтения
 with open(f'Precip{in_m}.txt', 'r') as file:
@@ -130,9 +129,7 @@ with open("ans.txt", 'w', encoding='utf-8') as file:
                     max += 0.25
                 else:
                     contining = False
-            #считаю количество переменных не равных 0
-            if precipitation_2 > 0.00:
-                col_not_zero += 1
+
             #и вписываю
             file.write(f"{i:>3}{f"{precipitation_2:.{2}f}":>7} {"*"*stars:<15}\n")
         except:
