@@ -39,7 +39,7 @@ maximum = 0
 averege = 0
 col_not_zero = 0
 
-# начал очтения
+# началo чтения
 with open(f'Precip{in_m}.txt', 'r') as file:
     #подготовка начала для выходного файла
     text = file.readline()
@@ -66,14 +66,13 @@ with open(f'Precip{in_m}.txt', 'r') as file:
 
     #подгатовка списка для дней что бы отслежиать повторы
     day_remembering = []
-    #терерь провера дней и уровня столбика
+    #терерь проверка дней и уровня столбика
     text = file.readline()
 
 
     while text != "":
         #так как после входных данных нам обещано отсутствие лишнего текста то я
         # просто буду брать строки до тех пор пока не закончаться,
-        # возможно стоит добавить проверку на фактор человеческой ошибки, но я подумаю
         day, precipitation = text.split()
         day = int(day)
         precipitation = float(precipitation)
